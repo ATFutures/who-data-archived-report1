@@ -1,0 +1,15 @@
+[.]md$
+^README\.Rmd$
+^README\.md$
+^\.gitignore$
+^\.travis\.yml$
+^appveyor\.yml$
+^_pkgdown\.yml$
+^makefile$
+^vignettes/makefile$
+^.*\.Rproj$
+^aaa\.Rmd$
+^docs$
+^code$
+^accra$
+^kathmandu$
