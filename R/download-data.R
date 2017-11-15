@@ -55,7 +55,7 @@ get_who_streets <- function (city = "kathmandu", n = 1)
 #' @return The \pkg{sf}-formatted data object (invisibly)
 #'
 #' @export
-get_who_buildings <- function (city = "kathmandu", n = 2)
+get_who_buildings <- function (city = "kathmandu", n = 1)
 {
     region_shape <- getbb(place_name = city, format_out = "polygon")
     if (is.list (region_shape))

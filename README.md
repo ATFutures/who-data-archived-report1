@@ -18,3 +18,5 @@ devtools::install_github("ATFutures/who")
 
     make osm
     make worldpop
+
+Note that `make osm` will always overwrite any existing OSM data, whereas `make worlpop` will only convert files if they've not already been converted.
