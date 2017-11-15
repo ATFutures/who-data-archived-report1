@@ -8,6 +8,10 @@
 #' @param expand Relative factor by which to expand cropping limits beyond
 #' rectangular bounding box of city
 #' @return Nothing Files are written to the corresponding directories
+#'
+#' @note This should be run from somewhere within the \code{whodata} repository
+#' structure; anywhere else will likely fail.
+#'
 #' @export
 crop_tif <- function (city = "accra", expand = 0.1)
 {
@@ -17,6 +21,12 @@ crop_tif <- function (city = "accra", expand = 0.1)
     wd <- file.path (here::here (), city, "worldpop")
     files <- list.files (wd)
     files <- file.path (wd, files [grep ("\\.zip", files)])
+
+    if (length (files) == 0)
+    {
+        message ("No files to convert for ", city)
+        return (NULL)
+    }
 
     pb <- txtProgressBar (style = 3)
     count <- 1
@@ -29,6 +39,7 @@ crop_tif <- function (city = "accra", expand = 0.1)
         r <- raster::raster (f1) %>% raster::crop (bb_exp)
         f0 <- paste0 (tools::file_path_sans_ext (f1), ".zip")
         file.remove (file.path (wd, f0))
+        file.remove (f1) # the full geotif dumped in current wd
         # faster convert file names to lower case, so
         f1 <- paste0 (tools::file_path_sans_ext (f1), ".tif")
         f1 <- file.path (wd, f1)

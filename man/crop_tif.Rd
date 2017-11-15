@@ -20,3 +20,7 @@ Nothing Files are written to the corresponding directories
 crops them to the designated cities, and converts them to much smaller geotif
 files.
 }
+\note{
+This should be run from somewhere within the \code{whodata} repository
+structure; anywhere else will likely fail.
+}
