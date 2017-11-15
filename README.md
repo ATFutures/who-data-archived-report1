@@ -20,3 +20,8 @@ devtools::install_github("ATFutures/who")
     make worldpop
 
 Note that `make osm` will always overwrite any existing OSM data, whereas `make worlpop` will only convert files if they've not already been converted.
+
+EC Joint Research Centre Data Collection
+========================================
+
+The JRCDC offers global gridded population density data [here](http://data.jrc.ec.europa.eu/dataset/jrc-ghsl-ghs_pop_gpw4_globe_r2015a/resource/ece1dd0b-a69a-4804-a69b-0984b15efcdd), with the actual downloads [here](http://cidportal.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_POP_GPW4_GLOBE_R2015A/).
