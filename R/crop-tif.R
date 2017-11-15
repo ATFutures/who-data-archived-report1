@@ -13,7 +13,7 @@
 #' structure; anywhere else will likely fail.
 #'
 #' @export
-crop_tif <- function (city = "accra", expand = 0.1)
+crop_worldpop_tif <- function (city = "accra", expand = 0.1)
 {
     bb <- osmdata::getbb (city)
     bb_exp <- t (apply (bb, 1, function (i)
