@@ -114,8 +114,8 @@ write_who_data <- function (dat, city, suffix, n = NULL)
 #' get_who_data_dir
 #'
 #' Find the "who-data" directory corresponding to the "who" directory of this
-#' project, and the sub-directory within that corresponding to the named city.
-#' The sub-dir will be created if it does not already exist.
+#' project, and the sub-directory within that corresponding to the OSM data of
+#' the named city.  The sub-dir will be created if it does not already exist.
 #'
 #' @param city Name of city for which data are obtained, and name of
 #' corresponding sub-directory in "who-data" where data are to be stored.
@@ -126,14 +126,10 @@ write_who_data <- function (dat, city, suffix, n = NULL)
 #' @noRd
 get_who_data_dir <- function (city)
 {
-    # NOTE: The substring command may not be platform independent, but will work
-    # on linux
-    dh <- substring (here::here (), 1, nchar (here::here()) - 4) %>%
-        file.path ("who-data")
+    dh <- file.path (here::here (), city)
     if (!file.exists (dh))
-        stop ("Directory who-data not found")
-
-    dh <- file.path (dh, city)
+        dir.create (dh)
+    dh <- file.path (dh, "osm")
     if (!file.exists (dh))
         dir.create (dh)
 
