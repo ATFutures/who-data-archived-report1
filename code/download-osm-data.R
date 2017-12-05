@@ -1,4 +1,4 @@
-devtools::load_all ()
+library (popdens)
 
 message ("getting kathmandu streets ... ", appendLF = FALSE)
 get_who_streets (city = "kathmandu", n = 1)

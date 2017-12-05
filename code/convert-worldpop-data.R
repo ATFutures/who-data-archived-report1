@@ -1,4 +1,4 @@
-devtools::load_all ()
+library (popdens)
 
 message ("converting kathmandu data:")
 crop_tif (city = "kathmandu")

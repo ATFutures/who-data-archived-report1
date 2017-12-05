@@ -7,17 +7,12 @@ Authors@R: c(
   )
 Description: WHO metapackage for pre-processing of WHO data.
 Depends: R (>= 3.3.3),
-  here,
-  magrittr,
-  osmdata,
-  popdens,
-  raster
+  popdens
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
 Suggests:
     knitr,
-    rmarkdown,
     testthat
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
