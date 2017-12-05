@@ -10,6 +10,7 @@ Depends: R (>= 3.3.3),
   here,
   magrittr,
   osmdata,
+  popdens,
   raster
 License: GPL-2
 Encoding: UTF-8
@@ -20,3 +21,4 @@ Suggests:
     testthat
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
+Additional_repositories: https://ATFutures.github.io/drat
